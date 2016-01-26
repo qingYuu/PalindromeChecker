@@ -16,7 +16,33 @@ public void setup()
 }
 public boolean palindrome(String word)
 {
-  //your code here
-  return false;
-}
+  String k = new String();
+  String m = new String();
+  String o = new String();
+  
+  String lowercase =word.toLowerCase();
+ 
+ for(int n=0; n<lowercase.length();n++)
+  {
+    if(Character.isLetter(lowercase.charAt(n))==true )
+    {
+      k=k+ lowercase.charAt(n);
+      m=m+ lowercase.charAt(n);
+      
+    }
+  }
 
+ int last= k.length()-1;
+ for(int i=last; i>=0; i--)
+    {
+      o= o+k.substring(i,i+1);
+    }
+   if(o.equals(m))
+    {
+    return true;
+    }
+   //System.out.println(o);
+  // System.out.println(m);  
+    return false;
+
+}
